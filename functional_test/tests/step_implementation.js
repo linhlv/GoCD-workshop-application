@@ -3,7 +3,7 @@
 const { openBrowser, closeBrowser, goto, click, text, title, $, get } = require('taiko');
 const assert = require("assert");
 
-beforeSuite(async () => openBrowser());
+beforeSuite(async () => openBrowser({ args: ['--no-sandbox'] }));
 
 afterSuite(async () => closeBrowser());
 
